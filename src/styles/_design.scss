@@ -1,0 +1,115 @@
+.design {
+  background-image: url(/src/images/design.png);
+  position: relative;
+  padding: 3.125rem;
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__content-title {
+    @include text-lg;
+    color: $color-white;
+    padding: 3.23rem 0;
+  }
+
+  &__content-separator {
+    @include separator;
+    border: 1px solid $color-white;
+  }
+
+  &__content-subtitle {
+    @include text-sm;
+    color: $color-white;
+    margin: 0 0 4.5625rem 0;
+  }
+
+  &__content-button {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    color: $color-white;
+    border: 2px solid $color-white;
+    background: transparent;
+    padding: 1.07rem 8.72rem;
+  }
+
+  &__content-button:hover {
+    border: 2px solid $color-light-red;
+    color: $color-light-red;
+  }
+
+  &__content-button:active {
+    background: $color-dark-red;
+    border: 2px solid $color-dark-red;
+    color: $color-white;
+  }
+}
+
+.design:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .design {
+    &__content-title {
+      font-size: 1.5rem;
+      padding: 2.778rem 0;
+    }
+
+    &__content-separator {
+      margin-bottom: 2rem;
+      min-width: 142px;
+    }
+
+    &__content-subtitle {
+      font-size: 0.875rem;
+      margin: 0 0 2rem 0;
+    }
+
+    &__content-button {
+      padding: 1.07rem 7.09rem;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .design {
+    padding: 0;
+
+    &__content {
+      padding-bottom: 3.625rem;
+    }
+
+    &__content-title {
+      font-size: 1.5rem;
+      padding: 1.84rem 0;
+    }
+
+    &__content-separator {
+      min-width: 134px;
+      margin-bottom: 1rem;
+    }
+
+    &__content-subtitle {
+      font-size: 0.875rem;
+      margin-bottom: 4.125rem;
+    }
+
+    &__content-button {
+      padding: 1.07rem 6.13rem;
+    }
+  }
+}

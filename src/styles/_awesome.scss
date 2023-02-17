@@ -1,0 +1,126 @@
+.awesome {
+  margin: 3.125rem 0;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__text-title {
+    @include text-lg;
+    color: $color-black;
+    padding: 3.38rem 0;
+  }
+
+  &__text-separator {
+    @include separator;
+  }
+
+  &__text-subtitle {
+    @include text-sm;
+    color: #86878B;
+    margin-bottom: 4.4375rem;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1.875rem;
+  }
+
+  &__row-col_title {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: $color-black;
+    padding: 2.15rem 0;
+    margin: 0;
+  }
+
+  &__row-col_subtitle {
+    @include text-sm;
+    color: $color-black;
+    margin: 0.5rem 0 0 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .awesome {
+    &__text-title {
+      font-size: 1.5rem;
+      padding: 2.778rem 0;
+    }
+
+    &__text-separator {
+      margin-bottom: 2rem;
+      min-width: 142px;
+    }
+
+    &__text-subtitle {
+      font-size: 0.875rem;
+      margin-bottom: 1.625rem;
+    }
+
+    &__row {
+      gap: 1.3125rem;
+    }
+
+    &__row-col_title {
+      font-size: 1.125rem;
+    }
+
+    &__row-col_subtitle {
+      font-size: 0.875rem;
+    }
+  }
+
+
+}
+
+@media (max-width: 720px) {
+  .awesome {
+    margin: 0;
+
+    &__text {
+      text-align: center;
+    }
+
+    &__text-title {
+      font-size: 1.5rem;
+      padding: 3.02rem 0;
+      margin: 0;
+    }
+
+    &__text-separator {
+      min-width: 134px;
+      margin-bottom: 1.5625rem;
+    }
+
+    &__text-subtitle {
+      font-size: 0.8125rem;
+      color: #86878B;
+      margin: 0 0 4.4375rem 0;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__row-col_title {
+      font-size: 1.125rem;
+      padding: 1.84rem 0;
+      margin-bottom: 0.5625rem;
+    }
+
+    &__row-col_subtitle {
+      font-size: 0.875rem;
+      margin: 0;
+    }
+  }
+}

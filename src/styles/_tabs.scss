@@ -1,0 +1,135 @@
+.tabs {
+  margin-top: 6.25rem;
+
+  &__content {
+    border: 1px solid #C6CBCD;
+  }
+
+  &__content-row {
+    display: flex;
+    gap: 1.875rem;
+  }
+
+  &__content-title {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.875rem;
+    color: $color-black;
+    padding: 2.66rem 0;
+    margin: 0 0 1.6875rem 5.5rem;
+  }
+
+  &__content-subtitle {
+    @include text-sm;
+    color: $color-black;
+    margin-left: 5.5rem;
+  }
+
+  &__content-button {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    @include text-sm;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-white;
+    background: $color-light-red;
+    padding: 1.17rem 6rem;
+    margin: 1.6875rem 0 0 5.5rem;
+  }
+
+  &__content-button:hover {
+    background: $color-dark-red;
+    color: $color-white;
+  }
+
+  &__content-button:active {
+    background: $color-light-red;
+    color: $color-white;
+  }
+}
+
+.nav__tab {
+  display: inline-block;
+  padding: 10px 72px;
+  border-radius: 5px 5px 0 0;
+  font-size: 0.875rem;
+  color: #333333;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $color-whitef;
+}
+
+.nav__tab-active {
+  border: 1px solid #C6CBCD;
+  border-bottom: none;
+  box-shadow: 0px 3px 0px -2px rgb(255, 255, 255);
+}
+
+@media (max-width: 1024px) {
+  .tabs {
+    &__content-title {
+      font-size: 1.5rem;
+    }
+
+    &__content-subtitle {
+      font-size: 0.875rem;
+    }
+
+    &__content-button {
+      padding: 1.17rem 4.51rem;
+    }
+
+    &__content-col_image {
+      max-width: 398px;
+      max-height: 385px;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .tabs {
+    margin-top: 3.1875rem;
+
+    &__nav-content {
+      display: flex;
+    }
+
+    &__content {
+      text-align: center;
+    }
+
+    &__content-row {
+      gap: 0;
+    }
+
+    &__content-col {
+      margin-bottom: 1.875rem;
+    }
+
+    &__content-title {
+      font-size: 1.125rem;
+      margin: 0;
+    }
+
+    &__content-subtitle {
+      font-size: 0.8125rem;
+      margin: 0;
+      padding-bottom: 1.8125rem;
+    }
+
+    &__content-button {
+      padding: 1.17rem 6rem;
+      margin: 0 auto;
+    }
+
+    &__content-col_image {
+      display: none;
+    }
+  }
+
+  .nav__tab {
+    padding: 0.5rem 2rem;
+  }
+}

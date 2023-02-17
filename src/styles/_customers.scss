@@ -1,0 +1,165 @@
+.customers {
+  &__promo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3.125rem;
+  }
+
+  &__promo-title {
+    @include text-lg;
+    color: #000000;
+    padding: 3.23rem 0;
+  }
+
+  &__promo-separator {
+    @include separator;
+  }
+
+  &__promo-subtitle {
+    @include text-sm;
+    color: #86878B;
+    padding-bottom: 5.1875rem;
+    margin: 0;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  &__row-col_subtitle {
+    background: #E2E2E2;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+  &__row-col_subtitle-text {
+    @include text-sm;
+    color: #86878B;
+    margin: 0;
+    padding: 1.97rem;
+  }
+
+  &__triangle-down {
+    @include triangle-down;
+  }
+
+  &__user {
+    display: flex;
+    gap: 1.875rem;
+    margin-bottom: 4rem;
+  }
+
+  &__user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9375rem;
+  }
+
+  &__user-name {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: flex-start;
+    color: $color-black;
+  }
+
+  &__user-profession {
+    @include text-sm;
+    display: flex;
+    justify-content: flex-start;
+    color: $color-black;
+  }
+}
+
+@media (max-width: 1024px) {
+  .customers {
+    &__promo-title {
+      font-size: 1.5rem;
+      padding: 2.778rem 0;
+    }
+
+    &__promo-separator {
+      margin-bottom: 2rem;
+      min-width: 142px;
+    }
+
+    &__promo-subtitle {
+      font-size: 0.875rem;
+      padding-bottom: 2rem;
+    }
+
+    &__row {
+      gap: 1.1875rem;
+    }
+
+    &__row-col_subtitle-text {
+      font-size: 0.875rem;
+    }
+
+    &__user {
+      gap: 1.375rem;
+    }
+
+    &__user-profile {
+      gap: 0.5625rem;
+    }
+
+    &__user-name {
+      font-size: 1.125rem;
+    }
+
+    &__user-profession {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .customers {
+    &__promo-title {
+      font-size: 1.5rem;
+      padding: 1.84rem 0;
+    }
+
+    &__promo-separator {
+      min-width: 134px;
+      margin-bottom: 1.5rem;
+    }
+
+    &__promo-subtitle {
+      font-size: 0.875rem;
+    }
+
+    &__row {
+      overflow-x: scroll;
+      justify-content: flex-start;
+    }
+
+    &__row-col_subtitle-text {
+      font-size: 0.875rem;
+      min-width: 288px;
+    }
+
+    &__user {
+      gap: 0.625rem;
+      margin-bottom: 2rem;
+    }
+
+    &__user-name {
+      font-size: 0.875rem;
+    }
+
+    &__user-profession {
+      font-size: 0.8125rem;
+    }
+  }
+}

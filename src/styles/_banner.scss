@@ -1,0 +1,147 @@
+.banner {
+  background-image: url(/src/images/banner.png);
+  position: relative;
+
+  &__wrap {
+    position: relative;
+    padding-top: 12.9375rem;
+    padding-bottom: 11.5625rem;
+  }
+
+  &__wrap-row {
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  &__wrap-col_logo {
+    margin-bottom: 3.125rem;
+  }
+
+  &__wrap-col_title {
+    font-weight: 500;
+    font-size: 3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    margin-bottom: 3.4375rem;
+  }
+
+  &__wrap-col_separator {
+    width: 170px;
+    border: 1px solid $color-white;
+    margin-bottom: 2.625rem;
+  }
+
+  &__wrap-col_subtitle {
+    font-size: 1.125rempx;
+    color: $color-white;
+    margin: 0 0 2.625rem 0;
+    max-width: 270px;
+  }
+
+  &__wrap-col_button {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.125rempx;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: $color-white;
+    border: 2px solid $color-white;
+    background: transparent;
+    padding: 1.14rem 6.18rem;
+  }
+
+  &__wrap-col_button:hover {
+    border: 2px solid $color-light-red;
+    color: $color-light-red;
+  }
+
+  &__wrap-col_button:active {
+    background: $color-dark-red;
+    border: 2px solid $color-dark-red;
+    color: $color-white;
+  }
+}
+
+.banner:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1024px) {
+  .banner {
+    &__wrap-col_title {
+      font-size: 2.25rem;
+      padding-bottom: 2.625rem;
+    }
+
+    &__wrap-col_separator {
+      margin-bottom: 1.9375rem;
+      min-width: 142px;
+    }
+
+    &__wrap-col_subtitle {
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    &__wrap-col_button {
+      padding: 0.89rem 3.21rem;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .banner {
+    &__wrap {
+      padding-top: 5.25rem;
+      padding-bottom: 3.125rem;
+    }
+
+    &__wrap-row {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__wrap-col_logo {
+      margin: 0;
+    }
+
+    &__wrap-col_title {
+      font-size: 2.25rem;
+      margin: 0;
+      padding-bottom: 2.75rem;
+    }
+
+    &__wrap-col_separator {
+      max-width: 134px;
+      margin: 0 auto;
+    }
+
+    &__wrap-col_subtitle {
+      max-width: 100%;
+      padding: 2.625rem 0;
+      margin: 0;
+    }
+
+    &__wrap-col_button {
+      margin: 0 auto;
+      padding: 0.9rem 6.46rem;
+    }
+  }
+
+  .wrap-col_logo-image {
+    display: none;
+  }
+}

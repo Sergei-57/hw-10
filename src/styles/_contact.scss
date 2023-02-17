@@ -1,0 +1,185 @@
+.contact {
+  padding: 3.125rem;
+
+  &__promo {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__promo-title {
+    @include text-lg;
+    color: $color-black;
+    padding: 3.23rem 0;
+  }
+
+  &__promo-separator {
+    @include separator;
+  }
+
+  &__promo-subtitle {
+    @include text-sm;
+    color: #86878B;
+    margin-bottom: 5.5625rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.875rem;
+  }
+
+  &__form-wrap_block {
+    display: flex;
+    flex-direction: column;
+    min-width: 550px;
+  }
+
+  &__form-wrap_input {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 0.875rem;
+    color: $color-grey;
+    padding-bottom: 1rem;
+    margin-bottom: 3.125rem;
+  }
+
+  &__form-wrap_textarea {
+    position: relative;
+    top: -1.5rem;
+    font-family: 'Open Sans';
+    font-size: 0.875rem;
+    color: $color-grey;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__button-text {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-light-red;
+    padding: 1.04rem 7.73rem;
+  }
+
+  &__button-text:hover {
+    background: $color-dark-red;
+    color: $color-white;
+  }
+
+  &__button-text:active {
+    background: $color-light-red;
+    color: $color-white;
+  }
+}
+
+textarea {
+  width: 550px;
+  height: 209px;
+  cursor: pointer;
+  border: none;
+  resize: none;
+  border-bottom: 2px solid $color-grey;
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    &__promo-title {
+      font-size: 1.5rem;
+      padding: 2.778rem 0;
+    }
+
+    &__promo-separator {
+      min-width: 142px;
+      margin-bottom: 2rem;
+    }
+
+    &__promo-subtitle {
+      font-size: 0.875rem;
+      margin-bottom: 4.5rem;
+    }
+
+    &__form {
+      gap: 1.25rem;
+    }
+
+    &__form-block {
+      min-width: 486px;
+    }
+
+    &__button-text {
+      padding: 1.04rem 6.1rem;
+    }
+  }
+
+  textarea {
+    width: 486px;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact {
+    padding: 0;
+
+    &__promo-title {
+      font-size: 1.5rem;
+      padding: 1.84rem 0;
+    }
+
+    &__promo-separator {
+      min-width: 134px;
+      margin-bottom: 1.5rem;
+    }
+
+    &__promo-subtitle {
+      font-size: 0.875rem;
+      margin-top: 0;
+      margin-bottom: 4rem;
+    }
+
+    &__form-wrap {
+      flex-direction: column;
+      gap: 1.875rem;
+    }
+
+    &__form-wrap_block {
+      min-width: 288px;
+    }
+
+    &__form-wrap_input {
+      margin-bottom: 4.3125rem;
+    }
+
+    &__button-text {
+      padding: 1.04rem 5.161rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  textarea {
+    max-width: 288px;
+  }
+}
+
+@media (max-width: 347px) {
+  .contact__button-text {
+    padding: 0.27rem 6rem;
+    margin-bottom: 2.5rem;
+  }
+}

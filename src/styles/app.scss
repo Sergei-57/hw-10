@@ -1,0 +1,28 @@
+// Variables
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-grey: #BDBDBD;
+$color-light-red: #EC7979;
+$color-dark-red: #AB4949;
+$color-red: red;
+
+// Сброс стилей
+@import "./reset";
+
+// Base
+@import "./scaffold";
+@import "./mixins";
+
+// Components
+@import "./header";
+@import "./banner";
+@import "./auth-block";
+@import "./media-icon";
+@import "./social";
+@import "./tabs";
+@import "./awesome";
+@import "./pricing";
+@import "./customers";
+@import "./design";
+@import "./contact";
+@import "./footer";

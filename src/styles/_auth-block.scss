@@ -1,0 +1,91 @@
+.auth-block {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: $color-white;
+  border-radius: 10px;
+  min-width: 470px;
+
+  &__title {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    padding: 1.84rem 0;
+    margin: 0 0 2.8125rem 0;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__form-input {
+    font-family: 'Open Sans';
+    font-size: 0.875rem;
+    color: $color-grey;
+    min-width: 370px;
+    padding-bottom: 1rem;
+    margin-bottom: 2.0625rem;
+  }
+
+  &__button {
+    margin-top: 2.625rem;
+    display: flex;
+    background: $color-light-red;
+    border-radius: 0px 0px 10px 10px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 0.9375rem;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  &__button:hover {
+    background: $color-dark-red;
+    color: $color-white;
+  }
+
+  &__button:active {
+    background: $color-light-red;
+    color: $color-white;
+  }
+}
+
+.color-title {
+  color: $color-light-red;
+}
+
+@media (max-width: 1024px) {
+  .auth-block {
+    min-width: 398px;
+  }
+}
+
+@media (max-width: 720px) {
+  .auth-block {
+    min-width: 288px;
+
+    &__title {
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__form-input {
+      min-width: 240px;
+      margin-bottom: 3.1875rem;
+    }
+  }
+}
